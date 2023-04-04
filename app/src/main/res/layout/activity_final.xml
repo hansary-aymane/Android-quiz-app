@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@drawable/bkg"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:src="@drawable/quiz" />
+
+    <TextView
+        android:id="@+id/congrats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/logo"
+        android:text="Congrats, you passed!"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="26dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/userName"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/congrats"
+        android:textStyle="bold"
+        android:text="User Name"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:textSize="28dp"
+        android:layout_below="@+id/userName">
+
+        <TextView
+            android:id="@+id/result1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/baseline_verified_24"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="7dp"
+            android:text="Your grade 100%"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/result2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:text="To Pass \n80% or higher"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="@android:color/system_neutral1_200"
+            android:textSize="18dp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/tryAgain"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/white"
+        android:layout_above="@+id/signOut"
+        android:text="Try Again"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/signOut"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:backgroundTint="#D60E0E"
+        android:layout_alignParentBottom="true"
+        android:text="Sign Out"
+        android:textColor="@color/white" />
+</RelativeLayout>
